@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DANGER ROOM // Target ID</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scanline"></div>
+    <div class="terminal-container">
+        <header>
+            <h1>DANGER ROOM SIMULATION</h1>
+            <div class="hud">
+                <div class="stat">SCORE: <span id="score">0</span></div>
+                <div class="stat warning">TIME: <span id="timer">10</span>s</div>
+            </div>
+        </header>
+
+        <main>
+            <div id="boot-screen" class="screen-box">
+                <h2>ESTABLISHING CONNECTION...</h2>
+                <p>Retrieving classified targets from central database.</p>
+            </div>
+
+            <div id="game-screen" class="screen-box hidden">
+                <div class="clue-header">IDENTIFY THE FOLLOWING TARGET:</div>
+                <div class="clue-box">
+                    <strong>PRIMARY POWERS:</strong>
+                    <p id="clue-powers">...</p>
+                </div>
+                <div class="clue-box">
+                    <strong>TACTICAL VULNERABILITY:</strong>
+                    <p id="clue-weakness">...</p>
+                </div>
+                <div class="clue-box">
+                    <strong>BASE OF OPERATIONS:</strong>
+                    <p id="clue-base">...</p>
+                </div>
+
+                <div class="options-grid" id="options-grid">
+                    <!-- Buttons injected via JS -->
+                </div>
+            </div>
+
+            <div id="game-over-screen" class="screen-box hidden">
+                <h2 class="alert-text">SIMULATION TERMINATED</h2>
+                <p>FINAL SCORE: <span id="final-score">0</span></p>
+                <button id="restart-btn" class="action-btn">INITIALIZE NEW ROUND</button>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
