@@ -7,17 +7,27 @@
 }
 
 body {
-    background-color: var(--primary-blue);
-    /* Halftone dot comic background */
-    background-image: radial-gradient(circle, #ffffff44 2px, transparent 2.5px);
-    background-size: 15px 15px;
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    padding: 20px;
+    background-color: #d7b579;
+    background-image: linear-gradient(rgba(30, 15, 0, 0.4), rgba(30, 15, 0, 0.75)), url('comics/comicstrip.jpg');
+    background-repeat: repeat;
+    background-size: 100% 100%, 550px auto; 
+    animation: comicPan 90s linear infinite;
+    font-family: 'Comic Neue', cursive, sans-serif;
+    color: #111; /* Changed from var(--ink-black) just to ensure it loads */
+    min-height: 100vh;
+    padding: 1.5rem 1rem;
+    overflow-x: hidden;
+    
+    /* These three lines keep the trivia game centered */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+}
+
+/* Ensure you also include the animation keyframes so the background actually moves */
+@keyframes comicPan {
+    from { background-position: 0 0, 0 0; }
+    to { background-position: 0 0, 0 -2000px; } 
 }
 
 .comic-container {
