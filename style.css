@@ -8,17 +8,16 @@
 
 body {
     background-color: #d7b579;
-    background-image: linear-gradient(rgba(30, 15, 0, 0.4), rgba(30, 15, 0, 0.75)), url('comics/comicstrip.jpg');
+    /* This reaches across the internet to grab the image from your first website */
+    background-image: linear-gradient(rgba(30, 15, 0, 0.4), rgba(30, 15, 0, 0.75)), url('https://yvanfastapi.vercel.app/comics/comicstrip.jpg');
     background-repeat: repeat;
     background-size: 100% 100%, 550px auto; 
     animation: comicPan 90s linear infinite;
     font-family: 'Comic Neue', cursive, sans-serif;
-    color: #111; /* Changed from var(--ink-black) just to ensure it loads */
+    color: #111; 
     min-height: 100vh;
     padding: 1.5rem 1rem;
     overflow-x: hidden;
-    
-    /* These three lines keep the trivia game centered */
     display: flex;
     justify-content: center;
     align-items: center;
